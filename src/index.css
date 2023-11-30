@@ -78,6 +78,10 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;;
 }
 
 .card:hover{
@@ -91,7 +95,39 @@ form{
   width: 90vw;
   height: auto;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0 auto;  
+}
+
+.card-image {
+  width: 100%;
+  /* Adjust the height or object-fit as needed */
+}
+
+.card-info {
+  padding: 1rem;
+  /* Add any additional styling here */
+}
+
+.star-icon {
+  width: 30px; /* Adjust as needed to fit your design */
+  height: auto; /* Maintain aspect ratio */
+}.star-icon {
+  width: 30px; /* Adjust as needed to fit your design */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.favButton {
+  background-color: #f0f2f3;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.favButton:hover {
+  background-color: #0056b3;
 }
 
 table {
@@ -119,4 +155,83 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+
+.detail-container {
+}
+
+.detail-container.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.detail-container.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table-container table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.table-container th,
+.table-container td {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: #f7f7f7;
+  font-weight: bold;
+}
+
+.navbar.dark {
+  background-color: #12121296;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #dddddd;
+  width: 98.3%;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar.dark .nav-links a {
+  color: white;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+}
+
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.theme-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-button img {
+  width: 24px; /* O el tamaño que tenga tu icono */
 }
