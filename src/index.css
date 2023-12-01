@@ -100,20 +100,20 @@ form{
 
 .card-image {
   width: 100%;
-  /* Adjust the height or object-fit as needed */
+  
 }
 
 .card-info {
   padding: 1rem;
-  /* Add any additional styling here */
+  
 }
 
 .star-icon {
-  width: 30px; /* Adjust as needed to fit your design */
-  height: auto; /* Maintain aspect ratio */
+  width: 30px; 
+  height: auto; 
 }.star-icon {
-  width: 30px; /* Adjust as needed to fit your design */
-  height: auto; /* Maintain aspect ratio */
+  width: 30px; 
+  height: auto; 
 }
 
 .favButton {
@@ -233,5 +233,5 @@ tr:nth-child(even) {
 }
 
 .theme-button img {
-  width: 24px; /* O el tamaño que tenga tu icono */
+  width: 24px;
 }
