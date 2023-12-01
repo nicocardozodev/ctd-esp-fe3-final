@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext, useEffect } from 'react';
+import { MyContext } from '../Context';
 import Card from "../Components/Card";
 import { useNavigate } from 'react-router-dom'
 
 const Favs = () => {
   let navigate = useNavigate();
+  const { state, dispatch } = useContext(MyContext);
+  const { theme, data } = state;
 
   const favs = JSON.parse(localStorage.getItem('favs')) || [];
 
@@ -11,12 +14,8 @@ const Favs = () => {
     navigate('/dentista/' + id);
   }
 
-  const handleAddToFav = (dentist) => {
-    alert(`Agregaste ${dentist.name} a tus favoritos`);
-  }
-
   return (
-    <>
+    <main className={`${theme}`} >
       <h1>Dentists Favs</h1>
       {favs.length > 0 && <div className='card-grid'>
         {favs.map(dentist => 
@@ -25,12 +24,12 @@ const Favs = () => {
             name={dentist.name} 
             username={dentist.username} 
             id={dentist.id} 
-            onClick={onCardClick} 
-            onAddToFav={handleAddToFav} 
+            onClick={onCardClick}
+            favorite={false}
           />
         )}
       </div>}
-    </>
+    </main>
   );
 };
 

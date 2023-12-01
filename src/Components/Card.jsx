@@ -1,6 +1,15 @@
 import React from "react";
 
-const Card = ({ name, username, id, onClick, onAddToFav }) => {
+const Card = ({ name, username, id, onClick, favorite = true }) => {
+
+  const handleAddToFav = (dentist, added) => {
+    if (added) {
+    alert(`Agregaste ${dentist.name} a tus favoritos`);
+    } else { 
+      alert('Este dentista ya esta en tus favoritos');
+    }
+  } 
+
 
   const addFav = (e) => {
     e.stopPropagation(); 
@@ -11,9 +20,8 @@ const Card = ({ name, username, id, onClick, onAddToFav }) => {
     if (!isFavExists) {
       favs.push(newFav);
       localStorage.setItem('favs', JSON.stringify(favs));
-      onAddToFav(newFav); 
-      alert('Este dentista ya está en tus favoritos.');
     }
+    handleAddToFav(newFav, !isFavExists); 
   };
 
   return (
@@ -23,9 +31,9 @@ const Card = ({ name, username, id, onClick, onAddToFav }) => {
             <h3>{name}</h3>
             <p>{username}</p>
         </div>
-        <button onClick={addFav} className="favButton">
+        {favorite && <button onClick={addFav} className="favButton">
           <img src="/images/star.png" alt="Agregar a Favoritos" className="star-icon"/>
-        </button>
+        </button>}
     </div>
   );
 };

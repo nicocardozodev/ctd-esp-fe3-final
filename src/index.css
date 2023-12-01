@@ -7,6 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 78vh;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -21,6 +27,11 @@ code {
 
 h1{
   text-align: center;
+  margin-top: 0;
+}
+
+h2{
+  margin-top: 0;
 }
 
 nav{
@@ -40,16 +51,17 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
+footer .dark{
+  background-color: #5b575796;
+}
+
 footer {
-  display: flex;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  width: 100%;
   height: 40px;
-  margin-top: 2rem;
 }
 
 footer > img{
@@ -175,6 +187,10 @@ tr:nth-child(even) {
   justify-content: center;
 }
 
+h1 {
+  margin-top: 0;
+}
+
 .table-container table {
   margin-top: 20px;
   border-collapse: collapse;
@@ -189,12 +205,15 @@ tr:nth-child(even) {
 }
 
 .table-container th {
-  background-color: #f7f7f7;
   font-weight: bold;
 }
+.table-container .dark th {
+  background-color: #5b575796;
+}
+
 
 .navbar.dark {
-  background-color: #12121296;
+  background-color: #5b575796;
   color: white;
 }
 
@@ -227,11 +246,125 @@ tr:nth-child(even) {
 }
 
 .theme-button {
-  background: none;
+  background: black;
+  border: 1px solid #ccc;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
+  padding: 6px 10px;
 }
 
 .theme-button img {
   width: 24px;
+}
+
+.form-container .dark{
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 200px;
+}
+
+.form .dark {
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.success-message {
+  color: green;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.contact-container {
+  text-align: center;
+}
+
+.contact-container .dark{
+  color: white;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #f1f1f1;
+}
+
+.footer-content .dark {
+  color: white;
+  background-color:#5b575796;
+}
+
+.dh-logo {
+  height: 50px; 
+}
+
+.social-media-icons {
+  display: flex;
+}
+
+.social-media-icons img {
+  margin-left: 10px; 
+  cursor: pointer;
+  height: 30px; 
+}
+
+.back-to-top-bar {
+  width: 100%;
+  padding: 10px 0;
+  background-color: red;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.back-to-top-bar:hover {
+  background-color: rgb(160, 69, 69);
 }
